@@ -1,6 +1,11 @@
+import TranslationForm from "../components/Translation/TranslationForm"
+
 const Translation = () => {
-    return(
+    return (
+        <>
         <h1>Translation</h1>
+        <TranslationForm/>
+        </>
     )
 }
 export default Translation
