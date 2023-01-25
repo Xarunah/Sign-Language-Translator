@@ -4,6 +4,7 @@ import {loginUser} from "../../api/user"
 import {storageSave} from '../../Storage/storage';
 import {useNavigate} from "react-router-dom";
 import { useUser } from '../../context/UserContext';
+import { STORAGE_KEY_USER } from '../../const/storageKeys';
 
 const usernameConfig = {
     required: true, minLength: 5
@@ -35,7 +36,7 @@ const LoginForm = () => {
         }
         
         if (userResponse !== null) {
-            storageSave("Translation-account", userResponse)
+            storageSave(STORAGE_KEY_USER, userResponse)
             setUser(userResponse)
         }
 
