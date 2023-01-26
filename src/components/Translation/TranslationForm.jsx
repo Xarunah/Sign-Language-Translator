@@ -1,28 +1,37 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { storeUserTranslation } from "../../api/translation";
+import { STORAGE_KEY_USER } from "../../const/storageKeys";
 import { useUser } from "../../context/UserContext";
+import { storageSave } from "../../Storage/storage";
+import { findUserById } from "../../api/user";
 
 const TranslateForm = () => {
     const [inputText, setInputText] = useState(" ")
     const [images, setImages] = useState([]);
-    const { user } = useUser();
+    const { user,setUser } = useUser();
 
+    useEffect(() => {
+        const findUser = async () => {
+            const[error, latestUser] = await findUserById(user.id)
+            if (error===null){
+                storageSave(STORAGE_KEY_USER, latestUser)
+                setUser(latestUser) 
+            }
+        }
+        console.log("HEJMEDDIG")
+        findUser()
+    },[setUser, user.id])
+    
     const handleChange = (event) => {
         setInputText(event.target.value);
     }
-
+    
     const handleButtonClick = async () => {
+        console.log(inputText, user)
+        storeUserTranslation(inputText, user)
         setImages(inputText.split('').map((char, index) => (
             <img className="sign" key={index} src={`../image/${char}.png`} alt={char} />
         )));
-       try {
-           await storeUserTranslation({
-               userId: user.id,
-               translations: [inputText]
-           });
-       } catch(e) {
-        alert(`Oops, an error occurred! Try again later`);
-       }
     }
 
     return (

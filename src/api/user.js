@@ -1,3 +1,4 @@
+
 import {createHeaders} from "./index"
 
 const apiUrl = process.env.REACT_APP_API_URL
@@ -20,11 +21,11 @@ const checkForUser = async (username) => {
 // creates user
 const createUser = async (username) => {
     try {
-        const response = await fetch(apiUrl, {
+        const response = await fetch(`${apiUrl}`, {
             method: "POST", // Create a resource
             headers: createHeaders(),
             body: JSON.stringify({
-                username,
+                username:username,
                 translations: []
             })
         })
@@ -53,4 +54,20 @@ export const loginUser = async (username) => {
 
     return await createUser(username)
 
+}
+
+export const findUserById = async(userId) =>{
+
+    try {
+        const response = await fetch(`${apiUrl}/${userId}`)
+
+        if (!response.ok) {
+            throw new Error("Couldn't find user by id" + userId)
+        }
+        const user = await response.json()
+        return [null, user]
+    }
+    catch (error) {
+        return [error.message, null]
+    }
 }

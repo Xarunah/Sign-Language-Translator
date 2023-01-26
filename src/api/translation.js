@@ -1,23 +1,22 @@
 import { createHeaders } from ".";
+const apiUrl=process.env.REACT_APP_API_URL;
 
-const TRANSLATIONS_API_URL=process.env.REACT_APP_TRANSLATIONS_API_URL;
 
-export async function storeUserTranslation({
-    userId,
-    translations
-}) {
+export const storeUserTranslation=async(translation, user)=> {
+    
     try {
-        const response = await fetch(`${TRANSLATIONS_API_URL}/${userId}`, {
+        const response = await fetch(`${apiUrl}/${user.id}`, {
             method: "PATCH",
             headers: createHeaders(),
             body: JSON.stringify({
-                translations
+                translations: [...user.translations, translation ]
             })
         });
         if (!response.ok) {
             throw new Error('Could not update translations history')
         }
-        return response.json();
+        const result = await response.json()
+        return [null, result]
     } catch(err) {
         return err.message
     }
