@@ -9,6 +9,7 @@ export const storeUserTranslation=async(translation, user)=> {
             method: "PATCH",
             headers: createHeaders(),
             body: JSON.stringify({
+                username: user.username,
                 translations: [...user.translations, translation ]
             })
         });
@@ -18,6 +19,6 @@ export const storeUserTranslation=async(translation, user)=> {
         const result = await response.json()
         return [null, result]
     } catch(err) {
-        return err.message
+        return [err.message, null]
     }
 }

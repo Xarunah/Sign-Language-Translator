@@ -18,7 +18,6 @@ const TranslateForm = () => {
                 setUser(latestUser) 
             }
         }
-        console.log("HEJMEDDIG")
         findUser()
     },[setUser, user.id])
     

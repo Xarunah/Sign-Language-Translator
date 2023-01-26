@@ -61,6 +61,7 @@ export const findUserById = async(userId) =>{
     try {
         const response = await fetch(`${apiUrl}/${userId}`)
 
+
         if (!response.ok) {
             throw new Error("Couldn't find user by id" + userId)
         }
