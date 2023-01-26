@@ -12,7 +12,7 @@ const usernameConfig = {
 
 const LoginForm = () => {
     // Hooks
-    const {register, handleSubmit, formState: {errors},} = useForm();
+    const {register, handleSubmit, formState: {errors}} = useForm();
     const {user, setUser} = useUser()
     const navigate = useNavigate()
 
