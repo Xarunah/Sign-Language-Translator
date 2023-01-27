@@ -1,0 +1,30 @@
+.translation-history-header{
+    text-align: center;
+    position:relative;
+    z-index: 20;
+    bottom: 7rem;
+    
+}
+
+.profile-header{
+    text-align: center;
+    place-items: center;
+    background-color: #fd932159;
+    display: grid;
+    height: 19rem;
+}
+
+.translation-history-box{
+    background-color: #ce7e28;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 10rem;
+    height: 30rem;
+    width: 30rem;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 3rem;
+    
+}

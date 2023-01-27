@@ -4,6 +4,7 @@ import { STORAGE_KEY_USER } from "../../const/storageKeys";
 import { useUser } from "../../context/UserContext";
 import { storageSave } from "../../Storage/storage";
 import { findUserById } from "../../api/user";
+import "../../styling/translationStyling.css";
 
 const TranslateForm = () => {
     const [inputText, setInputText] = useState(" ")

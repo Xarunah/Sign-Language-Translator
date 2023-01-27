@@ -5,7 +5,7 @@ import "../../src/styling/translationStyling.css"
 const Translation = () => {
     return (
         <>
-        <h1 className="translation-header">Translation</h1>
+        <h1 className="translation-header">Lost in Translation</h1>
         <TranslationForm/>
         </>
     )
