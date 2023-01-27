@@ -1,7 +1,9 @@
+import "../../styling/profileStyling.css";
+
 const ProfileHeader= ({username}) => {
     return (
         <header>
-            <h4>Hi {username}, welcome back!</h4>
+            <h4 className="profile-header">Hi {username}, welcome back!</h4>
         </header>
     )
 }

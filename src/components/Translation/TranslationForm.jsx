@@ -4,6 +4,7 @@ import { STORAGE_KEY_USER } from "../../const/storageKeys";
 import { useUser } from "../../context/UserContext";
 import { storageSave } from "../../Storage/storage";
 import { findUserById } from "../../api/user";
+import "../../styling/translationStyling.css";
 
 const TranslateForm = () => {
     const [inputText, setInputText] = useState(" ")
@@ -41,11 +42,14 @@ const TranslateForm = () => {
     }
 
     return (
-        <div>
+        <div className="box-translation">
+            <div className='translation-input'>
             <input type="text" onChange={handleChange} placeholder="What should I translate?" />
-            <button onClick={handleButtonClick}>Translate!</button>
-            {images}
+            <button className='translation-button' onClick={handleButtonClick}><i class="fa-solid fa-arrow-right"></i></button>
+            <div className="translation-img">{images}</div>
         </div>
+        </div>
+
     )
 }
 

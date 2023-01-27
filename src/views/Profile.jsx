@@ -22,11 +22,10 @@ const Profile = () => {
     }, [setUser, user.id])
 
     return (
-        <><h1>Profile</h1>
+        <> <h1>Lost in Translation</h1> 
             <ProfileHeader username={user.username} />
             <ProfileActions />
             <ProfileTranslationHistory translations={user.translations} />
-            
         </>
 
     )
