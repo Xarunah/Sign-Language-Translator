@@ -27,8 +27,11 @@ const TranslateForm = () => {
     
     const handleButtonClick = async () => {
         console.log(inputText, user)
-        storeUserTranslation(inputText, user)
-        setImages(inputText.split('').map((char, index) => (
+        let parseHistoryInput = inputText.replace(/[^a-z A-Z]/g, '')
+        
+        storeUserTranslation(parseHistoryInput, user)
+        let parseInput = inputText.toLowerCase().replace(/[^a-z]/g, '')
+        setImages( parseInput.split('').map((char, index) => (
             <img className="sign" key={index} src={`../image/${char}.png`} alt={char} />
         )));
     }
