@@ -4,10 +4,9 @@ import ProfileHeader from "../components/Profile/ProfileHeader"
 import ProfileTranslationHistory from "../components/Profile/ProfileTranslationHistory"
 import { useUser } from "../context/UserContext"
 import withAuth from "../hoc/withAuth"
-import useEffect from "react"
+import { useEffect } from "react"
 
-
-function Profile() {
+const Profile = () => {
 
     const { user, setUser } = useUser()
     useEffect(() => {
