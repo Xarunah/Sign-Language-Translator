@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FCBF49;
+}
+
+.translation-header {
+    text-align: center;
+}
+
+/* .translation-button {
+    
+} */
+
+.translation-input {
+    background-color: #ce7e28;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: -17rem;
+    height: 4rem;
+    width: 30rem;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 3rem;
+
+}
+
+.box-translation {
+    display: grid;
+    height: 19rem;
+    background-color: #fd932159;
+}
+
+.translation-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: -12rem;
+    width: 30rem;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 3rem;
+}
