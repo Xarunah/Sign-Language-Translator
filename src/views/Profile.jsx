@@ -6,6 +6,7 @@ import { useUser } from "../context/UserContext"
 import withAuth from "../hoc/withAuth"
 import useEffect from "react"
 
+
 function Profile() {
 
     const { user, setUser } = useUser()
