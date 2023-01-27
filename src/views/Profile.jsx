@@ -26,6 +26,7 @@ const Profile = () => {
             <ProfileHeader username={user.username} />
             <ProfileActions />
             <ProfileTranslationHistory translations={user.translations} />
+            
         </>
 
     )

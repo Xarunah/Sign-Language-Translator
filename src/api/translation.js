@@ -22,3 +22,4 @@ export const storeUserTranslation=async(translation, user)=> {
         return [err.message, null]
     }
 }
+
