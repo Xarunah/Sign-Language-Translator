@@ -1,5 +1,4 @@
 import { findUserById } from "../api/user"
-import ProfileActions from "../components/Profile/ProfileActions"
 import ProfileHeader from "../components/Profile/ProfileHeader"
 import ProfileTranslationHistory from "../components/Profile/ProfileTranslationHistory"
 import { useUser } from "../context/UserContext"
@@ -24,7 +23,6 @@ const Profile = () => {
     return (
         <> <h1>Lost in Translation</h1> 
             <ProfileHeader username={user.username} />
-            <ProfileActions />
             <ProfileTranslationHistory translations={user.translations} />
         </>
 

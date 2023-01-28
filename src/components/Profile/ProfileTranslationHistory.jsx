@@ -1,10 +1,9 @@
 import { clearHistory } from "../../api/translation";
-import { STORAGE_KEY_USER } from "../../const/storageKeys";
 import { useUser } from "../../context/UserContext";
 import ProfileTranslationHistoryItem from "./ProfileTranslationHistoryItem"
 
 const ProfileTranslationHistory= ({translations}) => {
-    const { user, setUser } = useUser()
+    const { user } = useUser()
     const translationList = translations.slice(-10).reverse().map((translation,index) => <ProfileTranslationHistoryItem key={index} translationItem={translation}/>)
 
     function handleLogout() {
@@ -15,15 +14,7 @@ const ProfileTranslationHistory= ({translations}) => {
     async function handleClearHistory() {
         try {
             await clearHistory(user);
-            // setUser({
-            //     ...user,
-            //     translations: []
-            // });
-            // localStorage.setItem(STORAGE_KEY_USER, JSON.stringify({
-            //     ...user,
-            //     translations: []
-            // }))
-            // window.location.reload();
+
         } catch(e) {
             alert("Oops, an error occurred!");
         }
@@ -38,8 +29,8 @@ const ProfileTranslationHistory= ({translations}) => {
                     {translationList}
 
                 </ul>
-                <button onClick={handleClearHistory}>Clear History</button>
-                <button onClick={handleLogout}>Logout</button>
+                <button className="clear-history-button" onClick={handleClearHistory}><i className="fa-solid fa-trash-can"></i></button>
+                <button className="logout-button" onClick={handleLogout}><i className="fa-solid fa-arrow-right-from-bracket"></i></button>
                 </div>
             </section>
         </div>

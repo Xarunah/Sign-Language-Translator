@@ -28,3 +28,29 @@
     border-radius: 3rem;
     
 }
+
+.clear-history-button {
+    background-color: transparent;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    padding: 0.5rem;
+    scale: 3;
+    bottom: -17rem;
+    right: 10rem;
+}
+
+.logout-button{
+    background-color: transparent;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    padding: 0.5rem;
+    scale: 3;
+    bottom: -17rem;
+    right: -6rem;
+}
