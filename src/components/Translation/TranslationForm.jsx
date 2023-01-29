@@ -43,16 +43,16 @@ const TranslateForm = () => {
 
     return (
         <div className="box-translation">
-           
+
             <div className='translation-input'>
             <input type="text" onChange={handleChange} placeholder="What should I translate?" />
-            <button className='translation-button' onClick={handleButtonClick}><i class="fa-solid fa-arrow-right"></i></button>
+            <button className='translation-button' onClick={handleButtonClick}><i className="fa-solid fa-arrow-right"></i></button>
             <div className="translation-img">{images}</div>
-               
+
         </div>
             <div>
                 <Link to="/profile">
-                <button>Go To Profile</button>
+                <button className="go-to-profile-button">Profile <i className="fa-solid fa-user"></i></button>
                 </Link>
             </div>
         </div>

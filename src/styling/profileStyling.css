@@ -57,8 +57,8 @@ border-color: #777;
 }
 
 .profile-to-translation-button:hover {
-  background-color: black;
-  color: white;
+background-color: black;
+color: white;
 }
 
 .logout-button{
@@ -72,4 +72,17 @@ border-color: #777;
     scale: 3;
     bottom: -17rem;
     right: -6rem;
+}
+
+.profile-to-translation-button {
+    background-color: transparent;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    padding: 0.5rem;
+    scale: 3;
+    bottom: -17rem;
+    right: -1rem;
 }

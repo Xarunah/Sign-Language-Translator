@@ -55,3 +55,17 @@ body {
     transform: translate(-50%);
     border-radius: 3rem;
 }
+
+.go-to-profile-button {
+    background-color: transparent;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    padding: 0.5rem;
+    scale: 2;
+    left: 90rem;
+    bottom: 6rem;
+
+}

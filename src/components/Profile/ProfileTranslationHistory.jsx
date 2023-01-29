@@ -32,7 +32,7 @@ const ProfileTranslationHistory= ({translations}) => {
                 </ul>
                 <button className="clear-history-button" onClick={handleClearHistory}><i className="fa-solid fa-trash-can"></i></button>
                     <Link to="/translation">
-                        <button className="profile-to-translation-button">Go To Translation</button>
+                        <button className="profile-to-translation-button"><i className="fa-solid fa-language"></i></button>
                     </Link>
                 <button className="logout-button" onClick={handleLogout}><i className="fa-solid fa-arrow-right-from-bracket"></i></button>
                 </div>
