@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FCBF49;
+}
+
+.login-header {
+    text-align: center;
+}
+
+.box-login {
+    display: grid;
+    height: 19rem;
+    background-color: #fd932159;
+}
+
+.input-box {
+    width: 15rem;
+}
+
+.login-button {
+    background-color: transparent;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    padding: 0.5rem;
+
+}
+
+.username-input {
+    background-color: #ce7e28;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: -17rem;
+    height: 4rem;
+    width: 30rem;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 3rem;
+
+
+}

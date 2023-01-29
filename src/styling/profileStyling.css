@@ -1,0 +1,75 @@
+.translation-history-header{
+    text-align: center;
+    position:relative;
+    z-index: 20;
+    bottom: 7rem;
+    
+}
+
+.profile-header{
+    text-align: center;
+    place-items: center;
+    background-color: #fd932159;
+    display: grid;
+    height: 19rem;
+}
+
+.translation-history-box{
+    background-color: #ce7e28;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 10rem;
+    height: 30rem;
+    width: 30rem;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 3rem;
+    
+}
+
+.clear-history-button {
+    background-color: transparent;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    padding: 0.5rem;
+    scale: 3;
+    bottom: -17rem;
+    right: 10rem;
+}
+
+.profile-to-translation-button{
+width : fit-content;
+padding: 1rem 1rem 1rem 1rem;
+font-weight: bold;
+bottom: -3.5rem;
+right: 12rem;
+border-radius: 7px;
+box-shadow: 0 0 25px rgba(0 0 0 0.5);
+position: absolute;
+cursor: pointer;
+border-width: thin;
+border-color: #777;
+}
+
+.profile-to-translation-button:hover {
+  background-color: black;
+  color: white;
+}
+
+.logout-button{
+    background-color: transparent;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    padding: 0.5rem;
+    scale: 3;
+    bottom: -17rem;
+    right: -6rem;
+}
